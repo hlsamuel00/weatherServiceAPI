@@ -113,6 +113,13 @@ Example Response:
 6. The `createApiResponse` method in `controllers/cleanApiData.ts` processes and transforms the raw data into a structured format defined in `models/weatherData.ts`.
 7. The cleaned data is returned to the client in JSON format.
  
+## Video Demonstration
+To provide a visual guide, I've decided to include a video demonstration of me running the unit tests in jest and the end to end test using the command line and Postman
+
+### Video Link
+Watch the video below to see how to run the tests in Jest as well as making an end-to-end test by getting a response from the API using the command line and Postman.
+- https://www.loom.com/share/0c0eadd217d84609bb6c957f1ee6cea6?sid=fa935477-1917-468b-9b26-d88fe57adcf1 
+
 ## Optimizations/Enhancements
 
 - **Error Handling:** Improve error handling for various edge cases and API failures.
