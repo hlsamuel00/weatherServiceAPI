@@ -1,5 +1,5 @@
 # Weather Tracking Server
-This is an HTTP server that utilizes the Open Weather API that exposes an endpoint that takes in latitude and longitude coordinates as query parameters. This endpoint will return the current weather condition in that area. It will provide a weather condition (snow, rain, clouds, etc.), whether it is hot, cold, or moderate outside (cold < 60, high > 85, and moderate between 60 and 85), and whether there are any weather alerts in the area.
+This is an HTTP server that utilizes the Open Weather API that exposes an endpoint that takes in latitude and longitude coordinates as query parameters. This endpoint will return the current weather condition in that area. It will provide a weather condition (snow, rain, clouds, etc.), whether it is hot, cold, or moderate outside (hot > 85, cold < 60, and moderate between 60 and 85), and whether there are any weather alerts in the area.
  
 ## Technology Used
  
