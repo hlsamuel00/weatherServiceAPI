@@ -3,9 +3,9 @@ import { TempDescriptions } from '../models/weatherData'
 import { RawClientData } from '../models/rawClientData'
 
 /**
- * Get a description of the temperature based on it's Farenheit numerical value.
+ * Get a description of the temperature based on it's Fahrenheit numerical value.
  * @param {number} temperature - The temperature to describe.
- * @returns {TempDescriptions} - The description of the temperature.
+ * @returns {TempDescriptions} The description of the temperature.
  */
 function getTempDesc(temperature: number): TempDescriptions{
     if (temperature < 70){
@@ -22,7 +22,7 @@ function getTempDesc(temperature: number): TempDescriptions{
 /**
  * Transform the raw API data into the response needed for the user.
  * @param {RawClientData} data - The data in JSON format received from the API client
- * @returns {WeatherData} - The cleaned and transformed data for the user
+ * @returns {WeatherData} The cleaned and transformed data for the user
 */
 export function createApiResponse(data: RawClientData): WeatherData{
     // Extract relevant weather data

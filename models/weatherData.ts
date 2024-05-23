@@ -8,11 +8,10 @@ enum TempDescriptions{
 }
 
 // Model for the weather data that will be returned from the API
-type WeatherData = { 
+interface WeatherData { 
     'temp description': TempDescriptions,
     'current condition': string,
     'alerts': string[] | string
 }
 
-export type { WeatherData }
-export { TempDescriptions }
+export { TempDescriptions, WeatherData }

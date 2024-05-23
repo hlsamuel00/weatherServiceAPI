@@ -5,7 +5,7 @@ class OpenWeatherClient{
     private apiKey: string
     public baseURL: string
 
-    constructor(apiKey: string | any){
+    constructor(apiKey: string){
         this.apiKey = apiKey
         this.baseURL = 'https://api.openweathermap.org/data/3.0/onecall?'
     }
@@ -29,8 +29,9 @@ class OpenWeatherClient{
         const url = `${this.baseURL}${params.toString()}`
 
         try {
-            const response: any = await fetch(url)
-            return response.json()
+            const response = await fetch(url)
+            let rawData = await response.json() as RawClientData
+            return rawData
 
         } catch (err) {
             console.error(err)

@@ -7,16 +7,16 @@ import { WeatherData } from '../models/weatherData'
 
 
 // Initialize OpenWeatherClient for OpenWeather API calls
-const weatherClient: any = new OpenWeatherClient(process.env.API_KEY)
+const weatherClient: OpenWeatherClient = new OpenWeatherClient(process.env.API_KEY as string)
 
 /**
  * Get the raw data from the OpenWeather API client, clean, transform, and return it to the user
- * @param {Request} req - The request object received from the exposed endpoint; latitude and longitude are required and will return an error if not provided.
- * @param {Response} res - The response object used to send back the desired weather data or an error message.
- * @returns {Promise<Response<WeatherData>} - The response containing the cleaned and transformed weather data in JSON format.
+ * @param {Request} req The request object received from the exposed endpoint; latitude and longitude are required and will return an error if not provided.
+ * @param {Response} res The response object used to send back the desired weather data or an error message.
+ * @returns {WeatherData} The response containing the cleaned and transformed weather data in JSON format.
  */
 export const getWeather =  async (req: Request, res: Response): Promise<Response<WeatherData>> => {
-    const { latitude, longitude } = req.query
+    const { latitude, longitude } = req.query as { latitude: string, longitude: string }
 
     // Determine if the latitude and longitude were provided.
     if (!latitude || !longitude){
